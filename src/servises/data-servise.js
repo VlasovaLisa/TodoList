@@ -6,8 +6,6 @@ export class DataService {
         return response.json();
     }
 
-
-
     static async addTask(task) {
         return fetch(`${BASE_API}tasks`, {
             method: 'POST',
