@@ -59,7 +59,7 @@ function TodoList() {
   const completeTodo = todo => {
     const updatedTodo = {...todo};
     updatedTodo.isComplete = !todo.isComplete;
-    DataService.updateTask(todo).then((res) => {
+    DataService.updateTask(updatedTodo).then((res) => {
       if (res.status === 200) {
         let updatedTodos = todos.map(i => {
           if (i.id === todo.id) {
